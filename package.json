@@ -14,7 +14,20 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
+    "bulma": "^0.9.1",
     "gatsby": "^2.24.85",
+    "gatsby-plugin-netlify": "^2.3.25",
+    "gatsby-plugin-netlify-cms": "^4.3.17",
+    "gatsby-plugin-purgecss": "^5.0.0",
+    "gatsby-plugin-sass": "^2.3.21",
+    "gatsby-plugin-sharp": "^2.6.43",
+    "gatsby-remark-images": "^3.3.39",
+    "gatsby-remark-relative-images-v2": "^0.1.5",
+    "gatsby-source-filesystem": "^2.3.36",
+    "gatsby-transformer-remark": "^2.8.46",
+    "gatsby-transformer-sharp": "^2.5.20",
+    "node-sass": "^4.14.1",
+    "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
