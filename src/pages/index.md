@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-name: St Gabriel Ethiopian Orthodox Church
+name: Saint Gabriel Ethiopan Orthodox Church
 location: San Jose, California
 image: /img/home-jumbotron.jpg
 scripture: Be on your guard; stand firm in the faith; be courageous; be strong.
