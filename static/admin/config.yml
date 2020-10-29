@@ -33,10 +33,18 @@ collections:
               label: Deacons,
               name: deacons,
               widget: object,
-              fields: [
-                { label: Title, name: title, widget: string },
-                { label: Images, name: images, widget: list, fields:[
-                  { label: Path, name: path, widget: image },
-                  { label: Name, name: name, widget: string }
-                ]}],
+              fields:
+                [
+                  { label: Title, name: title, widget: string },
+                  {
+                    label: Images,
+                    name: images,
+                    widget: list,
+                    fields:
+                      [
+                        { label: Path, name: path, widget: image },
+                        { label: Name, name: name, widget: string },
+                      ],
+                  },
+                ],
             }
