@@ -26,3 +26,17 @@ collections:
               default: "index-page",
             }
           - { label: Name, name: name, widget: string }
+          - { label: Location, name: location, widget: string }
+          - { label: Image, name: image, widget: image }
+          - { label: Scripture, name: scripture, widget: text }
+          - {
+              label: Deacons,
+              name: deacons,
+              widget: object,
+              fields: [
+                { label: Title, name: title, widget: string },
+                { label: Images, name: images, widget: list, fields:[
+                  { label: Path, name: path, widget: image },
+                  { label: Name, name: name, widget: string }
+                ]}],
+            }
