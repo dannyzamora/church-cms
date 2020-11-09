@@ -13,10 +13,10 @@ about:
 deacons:
   title: Deacons
   images:
-    - path: 1.jpg
+    - path: /img/deacon1.jpg
       name: Billy
-    - path: 1.jpg
+    - path: /img/deacon1.jpg
       name: Bobby
-    - path: 1.jpg
+    - path: /img/deacon1.jpg
       name: Bob
 ---
