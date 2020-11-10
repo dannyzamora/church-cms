@@ -7,8 +7,10 @@
 module.exports = {
   /* Your site config here */
   plugins: [
+    "gatsby-plugin-sass",
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
+
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/static/img`,
@@ -22,6 +24,8 @@ module.exports = {
         name: "pages",
       },
     },
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-transformer-remark",
       options: {
@@ -41,12 +45,15 @@ module.exports = {
               maxWidth: 2048,
             },
           },
+          {
+            resolve: "gatsby-remark-copy-linked-files",
+            options: {
+              destinationDir: "static",
+            },
+          },
         ],
       },
     },
-    "gatsby-plugin-sass",
-    "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-plugin-netlify-cms",
       options: {
