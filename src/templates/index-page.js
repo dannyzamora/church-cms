@@ -12,13 +12,13 @@ export const IndexPageTemplate = ({ image, name, location }) => (
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        backgroundPosition: `top left`,
+        backgroundPosition: `center left`,
         backgroundAttachment: `fixed`,
       }}
     >
       <div
         style={{
-          display: "flpex",
+          display: "flex",
           height: "150x",
           lineHeight: "1",
           justifyContent: "space-around",
@@ -30,8 +30,8 @@ export const IndexPageTemplate = ({ image, name, location }) => (
           className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
           style={{
             boxShadow:
-              "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-            backgroundColor: "rgb(255, 68, 0)",
+              "rgb(53,172,94) 0.5rem 0px 0px, rgb(53,172,94) -0.5rem 0px 0px",
+            backgroundColor: "rgb(53,172,94)",
             color: "white",
             lineHeight: "1",
             padding: "0.25em",
@@ -43,8 +43,8 @@ export const IndexPageTemplate = ({ image, name, location }) => (
           className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
           style={{
             boxShadow:
-              "rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px",
-            backgroundColor: "rgb(255, 68, 0)",
+              "rgb(53,172,94) 0.5rem 0px 0px, rgb(53,172,94) -0.5rem 0px 0px",
+            backgroundColor: "rgb(53,172,94)",
             color: "white",
             lineHeight: "1",
             padding: "0.25em",
@@ -54,9 +54,11 @@ export const IndexPageTemplate = ({ image, name, location }) => (
         </h3>
       </div>
     </div>
-    <section className="section section--gradient">
+    <section className="section ">
       <div className="container">
-        <p>ds</p>
+        <div className="content">
+          <p>ds</p>
+        </div>
       </div>
     </section>
   </div>
