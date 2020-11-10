@@ -31,11 +31,12 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: "gatsby-remark-relative-images",
+            resolve: `gatsby-remark-relative-images`,
             options: {
-              name: "uploads",
+              staticFolderName: "static/img",
             },
           },
+
           {
             resolve: "gatsby-remark-images",
             options: {
