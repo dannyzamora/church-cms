@@ -1,16 +1,15 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from "react"
+import { Link } from "gatsby"
 
-import logo from '../img/logo.svg'
+import logo from "../img/logo.svg"
 
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-success has-text-white-ter">
- 
+      <footer className="footer hero-foot has-background-success has-text-white-ter">
         <div className="content has-text-centered has-background-info has-text-white-ter">
           <div className="container has-background-black has-text-white-ter">
-            <div style={{ maxWidth: '100vw' }} className="columns">
+            <div style={{ maxWidth: "100vw" }} className="columns">
               <div className="column is-4">
                 <section className="menu">
                   <ul className="menu-list">

@@ -1,15 +1,13 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import logo from '../img/logo.svg'
-
-
+import React from "react"
+import { Link } from "gatsby"
+import logo from "../img/logo.svg"
 
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       active: false,
-      navBarActiveClass: '',
+      navBarActiveClass: "",
     }
   }
 
@@ -24,10 +22,10 @@ const Navbar = class extends React.Component {
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-              navBarActiveClass: 'is-active',
+              navBarActiveClass: "is-active",
             })
           : this.setState({
-              navBarActiveClass: '',
+              navBarActiveClass: "",
             })
       }
     )
@@ -35,52 +33,53 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Orthodox" style={{ width: '88px' }} />
-            </Link>
-            {/* Hamburger menu */}
+      <div className="hero-head has-background-grey-light">
+        <nav
+          className="navbar is-transparent"
+          role="navigation"
+          aria-label="main-navigation"
+        >
+          <div className="container">
+            <div className="navbar-brand">
+              <Link to="/" className="navbar-item" title="Logo">
+                <img src={logo} alt="Orthodox" style={{ width: "88px" }} />
+              </Link>
+              {/* Hamburger menu */}
+              <div
+                className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+                data-target="navMenu"
+                onClick={() => this.toggleHamburger()}
+              >
+                <span />
+                <span />
+                <span />
+              </div>
+            </div>
             <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
+              id="navMenu"
+              className={`navbar-menu ${this.state.navBarActiveClass}`}
             >
-              <span />
-              <span />
-              <span />
+              <div className="navbar-end has-text-centered">
+                <Link className="navbar-item" to="/">
+                  Home
+                </Link>
+                <Link className="navbar-item" to="/services">
+                  Services
+                </Link>
+                <Link className="navbar-item" to="/blog">
+                  Mass
+                </Link>
+                <Link className="navbar-item" to="/contact">
+                  Calendar
+                </Link>
+                <Link className="navbar-item" to="/contact/examples">
+                  Contact
+                </Link>
+              </div>
             </div>
           </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
-          >
-            <div className="navbar-end has-text-centered">
-              <Link className="navbar-item" to="/about">
-                Home
-              </Link>
-              <Link className="navbar-item" to="/products">
-                Services
-              </Link>
-              <Link className="navbar-item" to="/blog">
-                Mass
-              </Link>
-              <Link className="navbar-item" to="/contact">
-                Calendar
-              </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Contact
-              </Link>
-            </div>
-            
-          </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
     )
   }
 }
