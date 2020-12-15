@@ -1,45 +1,46 @@
+import { graphql } from "gatsby"
 import React from "react"
 
-import PropTypes from "prop-types"
-import { Link, graphql } from "gatsby"
-
 import Layout from "../components/Layout"
-import Deacons from "../components/Deacons"
+import Service from "../components/Service"
 
 // export const IndexPageTemplate = (
 // )
 
-export const ServicesPageTemplate = () => {
+export const ServicesPageTemplate = ({ services }) => {
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light"></h2>
-            </div>
-          </div>
+    <div className="container">
+      <div className="section">
+        <div className="tile is-ancestor is-vertical">
+          {services.map(service => (
+            <Service name={service.name} text={service.text} />
+          ))}
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 
-const ServicesPage = () => {
+const ServicesPage = ({ data }) => {
+  const { frontmatter } = data.markdownRemark
   return (
     <Layout>
-      {/* <ServicesPageTemplate
-        name={frontmatter.name}
-        aboutTitle={frontmatter.about.title}
-        aboutText={frontmatter.about.text}
-        scripture={frontmatter.scripture}
-        deacons={frontmatter.deacons}
-        location={frontmatter.location}
-        about={frontmatter.about}
-        image={frontmatter.image}
-      /> */}
+      <ServicesPageTemplate services={frontmatter.services} />
     </Layout>
   )
 }
 
 export default ServicesPage
+
+export const pageQuery = graphql`
+  query ServicesPageTemplate {
+    markdownRemark(frontmatter: { templateKey: { eq: "services-page" } }) {
+      frontmatter {
+        services {
+          name
+          text
+        }
+      }
+    }
+  }
+`
