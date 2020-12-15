@@ -60,15 +60,15 @@ collections:
             }
           - { label: Name, name: name, widget: string }
           - { label: Image, name: image, widget: image }
-          - { label: Services, 
-              name: services,
-              widget: list,
+          - label: Services
+              name: services
+              widget: list
               fields:
-                - { label: Name, name: name, widget: string}
+                - { label: Name, name: name, widget: string }
                 - { label: Image, name: image, widget: image}
                 - { label: Text, name: text, widget: text }
 
             
-          }
+          
 
 
