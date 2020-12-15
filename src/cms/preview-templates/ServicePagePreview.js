@@ -6,7 +6,7 @@ const ServicePagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(["data"]).toJS()
   console.log(data)
   if (data) {
-    return <ServicesPageTemplate />
+    return <ServicesPageTemplate services={data.services} />
   } else {
     return <div>Loading...</div>
   }
