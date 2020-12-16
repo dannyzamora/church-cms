@@ -33,53 +33,51 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <div className="hero-head has-background-grey-light">
-        <nav
-          className="navbar is-transparent"
-          role="navigation"
-          aria-label="main-navigation"
-        >
-          <div className="container">
-            <div className="navbar-brand">
-              <Link to="/" className="navbar-item" title="Logo">
-                <img src={logo} alt="Orthodox" style={{ width: "88px" }} />
-              </Link>
-              {/* Hamburger menu */}
-              <div
-                className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-                data-target="navMenu"
-                onClick={() => this.toggleHamburger()}
-              >
-                <span />
-                <span />
-                <span />
-              </div>
-            </div>
+      <nav
+        className="navbar hero-head has-background-primary"
+        role="navigation"
+        aria-label="main-navigation"
+      >
+        <div className="container">
+          <div className="navbar-brand">
+            <Link to="/" className="navbar-item" title="Logo">
+              <img src={logo} alt="Orthodox" style={{ width: "88px" }} />
+            </Link>
+            {/* Hamburger menu */}
             <div
-              id="navMenu"
-              className={`navbar-menu ${this.state.navBarActiveClass}`}
+              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+              data-target="navMenu"
+              onClick={() => this.toggleHamburger()}
             >
-              <div className="navbar-end has-text-centered">
-                <Link className="navbar-item" to="/">
-                  Home
-                </Link>
-                <Link className="navbar-item" to="/services">
-                  Services
-                </Link>
-                <Link className="navbar-item" to="/mass">
-                  Mass
-                </Link>
-                <Link className="navbar-item" to="/calendar">
-                  Calendar
-                </Link>
-                <Link className="navbar-item" to="/contact/examples">
-                  Contact
-                </Link>
-              </div>
+              <span />
+              <span />
+              <span />
             </div>
           </div>
-        </nav>
-      </div>
+          <div
+            id="navMenu"
+            className={`navbar-menu ${this.state.navBarActiveClass}`}
+          >
+            <div className="navbar-end has-text-centered">
+              <Link className="navbar-item" to="/">
+                Home
+              </Link>
+              <Link className="navbar-item" to="/services">
+                Services
+              </Link>
+              <Link className="navbar-item" to="/mass">
+                Mass
+              </Link>
+              <Link className="navbar-item" to="/calendar">
+                Calendar
+              </Link>
+              <Link className="navbar-item" to="/contact/examples">
+                Contact
+              </Link>
+            </div>
+          </div>
+        </div>
+      </nav>
     )
   }
 }

@@ -6,7 +6,7 @@ import "./all.sass"
 
 const Layout = ({ children }) => {
   return (
-    <div className="hero is-primary is-fullheight">
+    <div className="hero  is-fullheight">
       <Navbar />
       <div className="hero-body">{children}</div>
       <Footer />
