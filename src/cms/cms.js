@@ -9,3 +9,4 @@ import ServicePagePreview from "./preview-templates/ServicePagePreview"
 // CMS.registerMediaLibrary(cloudinary)
 
 CMS.registerPreviewTemplate("index", IndexPagePreview)
+CMS.registerPreviewTemplate("services", ServicePagePreview)
