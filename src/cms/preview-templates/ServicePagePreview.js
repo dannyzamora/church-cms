@@ -4,7 +4,6 @@ import { ServicesPageTemplate } from "../../templates/services-page"
 
 const ServicePagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(["data"]).toJS()
-  console.log(data)
   if (data) {
     return <ServicesPageTemplate services={data.services} />
   } else {
