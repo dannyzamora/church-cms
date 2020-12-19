@@ -17,16 +17,18 @@ export const IndexPageTemplate = ({
 }) => (
   <div>
     <div
-      className="full-width-image margin-top-0"
+      className="full-width-image mt-0"
       style={{
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
-        backgroundPosition: `50% 50%`,
+        backgroundPosition: `bottom`,
         backgroundAttachment: `fixed`,
+        height: "35vh",
       }}
     >
       <div
+        className="container"
         style={{
           display: "flex",
           height: "150x",
@@ -37,11 +39,11 @@ export const IndexPageTemplate = ({
         }}
       >
         <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen has-text-primary"
+          className="has-text-weight-bold is-size-5-mobile is-size-3-tablet has-text-centered has-text-white-ter "
           style={{
-            // boxShadow:
-            //   "rgb(53,172,94) 0.5rem 0px 0px, rgb(53,172,94) -0.5rem 0px 0px",
-            // backgroundColor: "rgb(53,172,94)",
+            boxShadow:
+              "rgb(22, 43, 50) 0.5rem 0px 0px, rgb(22, 43, 50) -0.5rem 0px 0px",
+            backgroundColor: "rgb(22, 43, 50)",
 
             lineHeight: "1",
             padding: "0.25em",
@@ -50,11 +52,11 @@ export const IndexPageTemplate = ({
           {name}
         </h1>
         <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen has-text-centered has-text-white-ter divider"
           style={{
-            // boxShadow:
-            //   "rgb(53,172,94) 0.5rem 0px 0px, rgb(53,172,94) -0.5rem 0px 0px",
-            // backgroundColor: "rgb(53,172,94)",
+            boxShadow:
+              "rgb(22, 43, 50) 0.5rem 0px 0px, rgb(22, 43, 50) -0.5rem 0px 0px",
+            backgroundColor: "rgb(22, 43, 50)",
 
             lineHeight: "1",
             padding: "0.25em",

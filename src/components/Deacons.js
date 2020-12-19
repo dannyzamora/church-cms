@@ -7,9 +7,19 @@ const Deacons = ({ deacons }) => (
     </div>
     <div className="columns is-centered is-multiline">
       {deacons.images.map(image => (
-        <div key={image.name} className="column box has-text-centered">
-          <PreviewCompatibleImage imageInfo={image} />
-          <p>{image.name}</p>
+        <div key={image.name} className="column ">
+          <div className="card">
+            <div className="card-image  ">
+              <figure className="image is-2by3">
+                <PreviewCompatibleImage imageInfo={image} />
+              </figure>
+            </div>
+            <div className="card-content">
+              <div className="content">
+                <p>{image.name}</p>
+              </div>
+            </div>
+          </div>
         </div>
       ))}
     </div>

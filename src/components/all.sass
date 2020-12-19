@@ -5,15 +5,13 @@
 $olive: #808000
 $royal-blue: #162b32
 $orange: #ff4838
-$kaldi-red-invert: #fff
 
 $primary: $royal-blue
-$primary-invert: $olive
+$danger: $orange
 
 
 // $body-color: #333
 // $black: #2b2523
-
 
 
 
@@ -103,6 +101,8 @@ $menu-label-color: $white-ter
 $navbar-item-color: $white-ter  !default
 $navbar-item-hover-color: $white-ter !default 
 $navbar-item-hover-background-color: $orange !default
+
+
 .menu-label
   font-size: 1em !important
   text-align: left
@@ -138,6 +138,14 @@ div .hero-body
   
 
 @import "~bulma"
+
+.content figure
+  margin-right: 0
+  margin-left: 0
+  
+$divider-margin-size : 0 
+@import "~@creativebulma/bulma-divider";
+
 
 
 // responsiveness

@@ -8,7 +8,7 @@ const Layout = ({ children }) => {
   return (
     <div className="hero  is-fullheight">
       <Navbar />
-      <div className="hero-body">{children}</div>
+      <div className="hero-body has-background-white-ter">{children}</div>
       <Footer />
     </div>
   )
