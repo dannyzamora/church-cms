@@ -14,9 +14,9 @@ deacons:
   title: Deacons
   images:
     - path: /img/deacon1.jpg
-      name: Billy
+      name: Name needed
     - path: /img/deacon1.jpg
-      name: Bobby
+      name: Name needed
     - path: /img/deacon1.jpg
-      name: Bob
+      name: Name needed
 ---
