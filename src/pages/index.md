@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-name: Debre Yibabe Kulbi Kidus Gabriel Ethiopan Orthodox Tewahido Churc
+name: Debre Yibabe Kulbi Kidus Gabriel Ethiopan Orthodox Tewahido Church
 location: San Jose, California
 image: /img/home-jumbotron.jpg
 scripture: Be on your guard; stand firm in the faith; be courageous; be strong.
