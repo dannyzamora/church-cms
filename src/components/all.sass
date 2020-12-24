@@ -98,9 +98,6 @@ $menu-item-active-background-color:	$orange
 $menu-list-border-left: 1px solid $orange
 $menu-label-color: $white-ter
 
-$navbar-item-color: $white-ter  !default
-$navbar-item-hover-color: $white-ter !default 
-$navbar-item-hover-background-color: $orange !default
 
 
 .menu-label
@@ -121,6 +118,13 @@ $navbar-item-hover-background-color: $orange !default
     vertical-align: middle
     display: inline
 
+$navbar-item-color: $white-ter  !default
+$navbar-item-hover-color: $white-ter !default 
+$navbar-item-hover-background-color: $orange !default
+
+.is-active
+  .navbar-item
+    $navbar-item-color: $black
 // blog roll
 .blog-list-item.is-featured
   background-color: #d6400033;
