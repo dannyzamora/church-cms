@@ -6,13 +6,15 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Deacons from "../components/Deacons"
 
+import PreviewCompatibleImage from "../components/PreviewCompatibleImage"
+
 export const IndexPageTemplate = ({
   image,
   name,
   location,
   aboutTitle,
   aboutText,
-  deacons,
+  priest,
   scripture,
 }) => (
   <div>
@@ -70,24 +72,51 @@ export const IndexPageTemplate = ({
     <section className="section">
       <div className="container">
         <div className="section">
-          <div className="columns">
+          <div className="content">
             <div className="content">
-              <div className="content">
-                <div className="tile is-ancestor">
-                  <div className="tile is-vertical">
+              <div className="tile is-ancestor">
+                <div className="tile is-vertical ">
+                  <div className="tile is-12">
                     <div className="tile is-parent">
                       <article className="tile is-child box">
                         <h1 className="title">{aboutTitle}</h1>
                         <h4 className="subtitle">{aboutText}</h4>
                       </article>
                     </div>
+                    <div className="tile is-parent is-3 ">
+                      <div className="tile is-child box  ">
+                        <div style={{ maxWidth: "240px", margin: "auto" }}>
+                          <h1>{priest.title}</h1>
+                          <figure>
+                            <PreviewCompatibleImage imageInfo={priest.image} />
+                          </figure>
+
+                          <article>
+                            <h6> {priest.name}</h6>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="tile is-parent ">
+                    <article className="tile  is-child box has-text-centered">
+                      <p className="subtitle">Upcoming Projects...</p>
+                    </article>
+                  </div>
+                  <div className="tile is-parent ">
+                    <article className="tile  is-child box has-text-centered">
+                      <p className="subtitle">Finances ...</p>
+                    </article>
+                  </div>
+                  <div className="tile is-parent ">
+                    <article className="tile  is-child box has-text-centered">
+                      <p className="subtitle">{scripture}</p>
+                    </article>
                   </div>
                 </div>
               </div>
 
-              <Deacons deacons={deacons} />
-
-              <div className="tile is-ancestor">
+              {/* <div className="tile is-ancestor">
                 <div className="tile is-vertical">
                   <div className="tile">
                     <div className="tile is-parent is-vertical">
@@ -97,7 +126,7 @@ export const IndexPageTemplate = ({
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -113,7 +142,7 @@ export const IndexPageTemplate = ({
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-
+  console.log(frontmatter.priest.images)
   return (
     <Layout>
       <IndexPageTemplate
@@ -121,7 +150,7 @@ const IndexPage = ({ data }) => {
         aboutTitle={frontmatter.about.title}
         aboutText={frontmatter.about.text}
         scripture={frontmatter.scripture}
-        deacons={frontmatter.deacons}
+        priest={frontmatter.priest}
         location={frontmatter.location}
         about={frontmatter.about}
         image={frontmatter.image}
@@ -149,19 +178,17 @@ export const pageQuery = graphql`
             }
           }
         }
-        deacons {
+        priest {
           title
-          images {
-            path {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 100) {
-                  ...GatsbyImageSharpFluid
-                  ...GatsbyImageSharpFluidLimitPresentationSize
-                }
+          image {
+            childImageSharp {
+              fluid(maxWidth: 240, quality: 100) {
+                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluidLimitPresentationSize
               }
             }
-            name
           }
+          name
         }
         location
       }

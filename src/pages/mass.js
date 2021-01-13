@@ -33,37 +33,37 @@ export const MassPageTemplate = ({}) => {
                   <tbody>
                     <tr>
                       <td>Sunday</td>
-                      <td>5:30AM–1AM</td>
+                      <td>6:00AM to 12:00AM</td>
                     </tr>
                     <tr>
                       {" "}
                       <td>Monday</td>
-                      <td>5:30AM–1AM</td>
+                      <td> 7:00AM-10:00AM</td>
                     </tr>
                     <tr>
                       {" "}
                       <td>Tuesday</td>
-                      <td>5:30AM–1AM</td>
+                      <td>7:00AM-10:00AM</td>
                     </tr>
                     <tr>
                       {" "}
                       <td>Wednesday</td>
-                      <td>5:30AM–1AM</td>
+                      <td>7:00AM-10:00AM</td>
                     </tr>
                     <tr>
                       {" "}
                       <td>Thursday</td>
-                      <td>5:30AM–1AM</td>
+                      <td>7:00AM-10:00AM</td>
                     </tr>
                     <tr>
                       {" "}
                       <td>Friday</td>
-                      <td>5:30AM–1AM</td>
+                      <td>7:00AM-10:00AM</td>
                     </tr>
                     <tr>
                       {" "}
                       <td>Saturday</td>
-                      <td>5:30AM–1AM</td>
+                      <td>6:00AM-10:00AM</td>
                     </tr>
                   </tbody>
                 </table>
@@ -73,15 +73,11 @@ export const MassPageTemplate = ({}) => {
                   <tbody>
                     <tr>
                       <th>Address</th>
-                      <td>San Jose, CA San Jose, CA</td>
+                      <td>587 N 6th Street, San Jose, CA 95111</td>
                     </tr>
                     <tr>
                       <th>Number</th>
-                      <td>(408) 444-4444</td>
-                    </tr>
-                    <tr>
-                      <th>Head Priest</th>
-                      <td>PUTA NAMEHERE</td>
+                      <td>(408) 564-6902</td>
                     </tr>
                   </tbody>
                 </table>

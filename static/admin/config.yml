@@ -29,25 +29,15 @@ collections:
           - { label: Location, name: location, widget: string }
           - { label: Image, name: image, widget: image }
           - { label: Scripture, name: scripture, widget: text }
-          - {
-              label: Deacons,
-              name: deacons,
-              widget: object,
+          -   label: Priest,
+              name: priest,
+              widget: "object",
               fields:
-                [
-                  { label: Title, name: title, widget: string },
-                  {
-                    label: Images,
-                    name: images,
-                    widget: list,
-                    fields:
-                      [
-                        { label: Path, name: path, widget: image },
-                        { label: Name, name: name, widget: string },
-                      ],
-                  },
-                ],
-            }
+                - { label: "Title", name: "title", widget: "string" }
+                - { label: "Image", name: "image", widget: "image" }
+                - { label: "Name", name: "name", widget: "string" }
+                
+            
       - file: "src/pages/services/index.md"
         label: "Services Page"
         name: "services"
@@ -71,3 +61,26 @@ collections:
                   { label: Text, name: text, widget: text },
                 ],
             }
+
+      - file: "src/pages/youth/index.md"
+        label: "Youth Page"
+        name: "services"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "youth-page",
+            }
+          - { label: Name, name: name, widget: string }
+          - {
+              label: Services,
+              name: services,
+              widget: list,
+              fields:
+                [
+                  { label: Name, name: name, widget: string },
+                  { label: Image, name: image, widget: image },
+                  { label: Text, name: text, widget: text },
+                ],
+              

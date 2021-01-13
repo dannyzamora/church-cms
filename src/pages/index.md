@@ -1,6 +1,6 @@
 ---
 templateKey: index-page
-name: Debre Yibabe Kulbi Kidus Gabriel Ethiopan Orthodox Tewahido Church
+name: Debre Yibabe Kulubi Kikus Gabriel Ethiopina Orthodox Tewahido Church
 location: San Jose, California
 image: /img/home-jumbotron.jpg
 scripture: Be on your guard; stand firm in the faith; be courageous; be strong.
@@ -10,13 +10,8 @@ about:
   text: We offer an array of services.We offer an array of services. We offer an
     array of services.We offer an array of services. We offer an array of
     services.We offer an array of services.
-deacons:
-  title: Deacons
-  images:
-    - path: /img/deacon1.jpg
-      name: Name needed
-    - path: /img/deacon1.jpg
-      name: Name needed
-    - path: /img/deacon1.jpg
-      name: Name needed
+priest:
+  title: Head Priest
+  image: /img/deacon1.jpg
+  name: Melakesebhat Habtemariam Abebe Teshome
 ---

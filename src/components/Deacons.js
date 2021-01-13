@@ -5,12 +5,12 @@ const Deacons = ({ deacons }) => (
     <div>
       <h3 className="has-text-weight-semibold ">{deacons.title}</h3>
     </div>
-    <div className="columns is-centered is-multiline">
+    <div className="columns is-multiline">
       {deacons.images.map(image => (
         <div key={image.name} className="column ">
           <div className="card">
             <div className="card-image  ">
-              <figure className="image is-2by3">
+              <figure className="image">
                 <PreviewCompatibleImage imageInfo={image} />
               </figure>
             </div>
